@@ -1,0 +1,30 @@
+{
+  "name": "tubes_2_rumahcodingstudio",
+  "version": "1.0.0",
+  "description": "tubes 2 manpro",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josefel21/Tubes_2_RumahCodingStudio.git"
+  },
+  "author": "Jose, Ivan, Gharlan, Akmal",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql": "^2.18.1"
+  },
+  "bugs": {
+    "url": "https://github.com/josefel21/Tubes_2_RumahCodingStudio/issues"
+  },
+  "homepage": "https://github.com/josefel21/Tubes_2_RumahCodingStudio#readme"
+}
