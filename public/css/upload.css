@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+.navBar{
+    z-index: 1;
+}
+
+.dev {
+    margin-left: 10%;
+    margin-top: 8%;
+}
