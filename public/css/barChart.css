@@ -7,7 +7,47 @@ body{
     z-index: 1;
 }
 
+
+.ampli{
+    position: fixed;
+    transform: rotate(14deg);
+    margin-top: 10%;
+}
+
 .dev {
     margin-left: 10%;
     margin-top: 8%;
+}
+
+.filter-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(228, 227, 234);
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.filter-values label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.filter-values select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.fil {
+    
+  }
+
+.var {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
