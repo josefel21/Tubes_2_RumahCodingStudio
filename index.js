@@ -4,8 +4,6 @@ import express from "express";
 const PORT = 8080;
 const app = express();
 
-
-
 const staticPath = path.resolve("public");
 app.use(express.static(staticPath));
 app.use(express.json({ limit: "50mb" }));
@@ -14,13 +12,29 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.set("view engine", "ejs");
 
 
+//landing
+app.get("/", (req, res) => {
+  res.render("page/landing");
+});
+
 //home
 app.get("/home", (req, res) => {
   res.render("page/home");
 });
 
-app.get("/", (req, res) => {
-  res.render("page/landing");
+//upload
+app.get("/upload", (req, res) => {
+  res.render("page/upload");
+});
+
+//bar chart
+app.get("/barChart", (req, res) => {
+  res.render("page/barChart");
+});
+
+//scatter plot
+app.get("/scatterPlot", (req, res) => {
+  res.render("page/scatterPlot");
 });
 
 app.listen(PORT);
