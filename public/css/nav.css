@@ -45,3 +45,8 @@ body {
   a:hover {
     color: rgb(255, 255, 255);
   }
+
+  nav ul li a.active {
+    color: black;
+    font-weight: bold;
+  }
