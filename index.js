@@ -27,6 +27,10 @@ app.get("/upload", (req, res) => {
   res.render("page/upload");
 });
 
+app.get("/summary", (req, res) => {
+  res.render("page/summary");
+});
+
 //bar chart
 app.get("/barChart", (req, res) => {
   res.render("page/barChart");
