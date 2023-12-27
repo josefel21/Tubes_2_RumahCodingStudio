@@ -4,7 +4,6 @@ import express from "express";
 import {
   uploadPost,
 } from "./server/upload.js";
-import { clear } from "console";
 
 const PORT = 8080;
 const app = express();
