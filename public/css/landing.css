@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: rgba(228, 227, 234, 0.838);
+    margin-top: -1%;
 }
 
 .container {
@@ -72,8 +73,9 @@ body {
 .buttom {
     display: flex;
     flex-direction: row;
-    margin-top: 15%;
+    margin-top: 7%;
     height: 60px;
+    margin-left: -20%;
 }
 
 .buttom p {
