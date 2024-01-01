@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/scatterPlot.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>SCATTER PLOT</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/scatterPlot.css">
-  <title>SCATTER PLOT</title>
-</head>
-
-<body>
-  <div class="navBar">
-    <%- include('../component/nav') %>
-  </div>
-  <div class="dev">
-    UPSS, PAGES STILL UNDER DEVELOPMENT
-  </div>
-</body>
-
+  <body>
+    <div class="navBar"><%- include('../component/nav') %></div>
+    <div class="content">
+      <div class="chart">
+        <canvas id="scatterPlot" width="400" height="400"></canvas>
+        UPSS, PAGES STILL UNDER DEVELOPMENT
+      </div>
+      <div class="filter">
+        <div class="border">
+          <h3>FILTER</h3>
+          <select id="dropdown" name="dropdown">
+            <option value="option1">WINE SALES</option>
+            <option value="option2">FRUIT SALES</option>
+          </select>
+          <select id="dropdown" name="dropdown">
+            <option value="option1">WINE SALES</option>
+            <option value="option2">FRUIT SALES</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

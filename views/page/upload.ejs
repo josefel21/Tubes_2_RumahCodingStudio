@@ -13,13 +13,19 @@
   <div class="navBar">
     <%- include('../component/nav') %>
   </div>
-  <form id="uploadForm" enctype="multipart/form-data">
+  <div class="ampli">
+    <img src="images/ampli.png" alt="Data Image">
+  </div>
+  <div class="content">
+    <form id="uploadForm" enctype="multipart/form-data">
       <img src="images/uploadIcon.png" alt="Gambar Kecil">
       <div class="file-upload">
         <input type="file" id="fileInput" name="csvFile" accept=".csv" required>
       </div>
       <button id="uploadButton" type="button">UPLOAD</button>
   </form>
+  </div>
+  
   
 </body>
 

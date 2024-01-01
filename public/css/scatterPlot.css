@@ -7,7 +7,35 @@ body{
     z-index: 1;
 }
 
-.dev {
+.chart {
     margin-left: 10%;
     margin-top: 8%;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.filter{
+    background-color:rgb(247, 249, 251);
+    padding: 2%;
+    height: 93.5%;
+    width: 20%;
+    margin-left: 6%;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.border {
+    border-width: 1px; /* Lebar border 2px */
+    border-style: solid; /* Style solid (garis lurus) */
+    border-color: #000000d1; /* Warna hitam (#000) */
+    height: 98%;
+    padding: 4%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
