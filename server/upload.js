@@ -38,7 +38,8 @@ export const uploadPost = async (req, res) => {
         }
 
         const columns = Object.keys(csvData[0]).join(',');
-        const values = csvData.map(row => `(${Object.values(row).map(value => `'${value}'`).join(',')})`).join(',');
+        console.log(columns);
+        const values = csvData.map(row => `(${Object.values(row).map(value => value !== null ? `'${value}'` : 'NULL').join(',')})`).join(',');
 
         const query = `INSERT INTO customer (${columns}) VALUES ${values}`;
 
@@ -46,5 +47,6 @@ export const uploadPost = async (req, res) => {
         const result = await conn.query(query);
     });
   } catch (err) {
+    console.log(err);
   }
 };

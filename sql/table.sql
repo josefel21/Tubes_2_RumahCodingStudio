@@ -4,7 +4,7 @@ CREATE TABLE Customer (
     ID int(14) NOT NULL,
     Year_Birth int(12) NOT NULL,
     Education varchar(10) NOT NULL,
-    Maritial_Status varchar(8) NOT NULL,
+    Marital_Status varchar(8) NOT NULL,
     Income int(20) NOT NULL,
     Kidhome int(3) NOT NULL,
     Teenhome int (3) NOT NULL,

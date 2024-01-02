@@ -4,23 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/upload.css">
-  <script type="module" src="/javascript/upload.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="../css/global.css" />
+  <link rel="stylesheet" type="text/css" href="../css/nav.css">
+  <link rel="stylesheet" type="text/css" href="../css/upload.css">
+  <script type="module" src="../javascript/upload.js" defer></script>
   <title>UPLOAD</title>
 </head>
 
 <body>
-  <div class="navBar">
-    <%- include('../component/nav') %>
-  </div>
-  <form id="uploadForm" enctype="multipart/form-data">
-      <img src="images/uploadIcon.png" alt="Gambar Kecil">
-      <div class="file-upload">
-        <input type="file" id="fileInput" name="csvFile" accept=".csv" required>
-      </div>
-      <button id="uploadButton" type="button">UPLOAD</button>
-  </form>
-  
-</body>
+  <%- include('../component/nav') %>
+  <main>
+    <div class="ampli">
+      <img src="images/ampli.png" alt="Data Image">
+    </div>
 
+    <form id="uploadForm" class="upload" enctype="multipart/form-data">
+      <label for="fileInput">
+        <img src="images/uploadIcon.png" alt="Gambar Kecil">
+      </label>
+      <input type="file" id="fileInput" name="csvFile" accept=".csv" required>
+      <button id="uploadButton" type="button">UPLOAD</button>
+    </form>
+    
+  </main>
+</body>
 </html>

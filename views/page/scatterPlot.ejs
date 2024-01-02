@@ -4,16 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/scatterPlot.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../css/global.css" />
+  <link rel="stylesheet" type="text/css" href="../css/nav.css">
+  <link rel="stylesheet" type="text/css" href="../css/scatterPlot.css">
   <title>SCATTER PLOT</title>
 </head>
 
 <body>
-  <div class="navBar">
-    <%- include('../component/nav') %>
+  <%- include('../component/nav') %>
+  <div class="ampli">
+    <img src="images/ampli.png" alt="Data Image">
   </div>
-  <div class="dev">
-    UPSS, PAGES STILL UNDER DEVELOPMENT
+  <div class="quote">
+    <h1>PILIH ATRIBUT UNTUK MELIHAT SCATTERPLOT</h1>
+  </div>
+  <div class="attr">
+    <h1>VARIABLE</h1>
+    <form name="variable" id="ddVar">
+      <h2>ATRIBUT</h2>
+      <select name="att1" id="att1">
+        <option value="def" selected="selected">pilih atribut</option>
+        <option value="year">Year_Birth</option>
+        <option value="education">Education</option>
+        <option value="marital">Martial_Status</option>
+        <option value="income">Income</option>
+        <option value="kidhome">Kidhome</option>
+        <option value="teenhome">Teenhome</option>
+        <option value="dt">Dt_Customer</option>
+        <option value="recency">Recency</option>
+        <option value="mntwines">MntWines</option>
+        <option value="mntfruits">MntFruits</option>
+        <option value="mntmeatproducts">MntMeatProducts</option>
+        <option value="mntfishproducts">MntFishProducts</option>
+        <option value="mntsweetproducts">MntSweetProducts</option>
+        <option value="mntgoldprods">MntGoldProds</option>
+        <option value="numdealspurchases">NumDealsPurchases</option>
+        <option value="numwebpurchases">NumWebPurchases</option>
+        <option value="numcatalogpurchases">NumCatalogPurchases</option>
+        <option value="numstorepurchases">NumStorePurchases</option>
+        <option value="numwebvisitsmonth">NumWebVisitsMonth</option>
+        <option value="acceptedcmp1">AcceptedCmp1</option>
+        <option value="acceptedcmp2">AcceptedCmp2</option>
+        <option value="acceptedcmp3">AcceptedCmp3</option>
+        <option value="acceptedcmp4">AcceptedCmp4</option>
+        <option value="acceptedcmp5">AcceptedCmp5</option>
+        <option value="complain">Complain</option>
+        <option value="zcostcontact">Z_CostContract</option>
+        <option value="zrevenue">Z_Revenue</option>
+        <option value="response">Response</option>
+      </select>
+    </form>
   </div>
 </body>
 
