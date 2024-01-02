@@ -10,24 +10,67 @@
 
   <body>
     <div class="navBar"><%- include('../component/nav') %></div>
+    <div class="ampli">
+      <img src="images/ampli.png" alt="Data Image">
+    </div>
     <div class="content">
       <div class="chart">
         <canvas id="scatterPlot" width="400" height="400"></canvas>
-        UPSS, PAGES STILL UNDER DEVELOPMENT
+        TEMPAT SCATTER PLOT
       </div>
       <div class="filter">
         <div class="border">
-          <h3>FILTER</h3>
-          <select id="dropdown" name="dropdown">
-            <option value="option1">WINE SALES</option>
-            <option value="option2">FRUIT SALES</option>
-          </select>
-          <select id="dropdown" name="dropdown">
-            <option value="option1">WINE SALES</option>
-            <option value="option2">FRUIT SALES</option>
-          </select>
+          <div class="upper">
+            <h3>FILTER</h3>
+            <p>AXIS X</p>
+            <select id="dropdown" name="dropdown">
+              <option value="option1">WINE SALES</option>
+              <option value="option2">FRUIT SALES</option>
+            </select>
+            <p>AXIS Y</p>
+            <select id="dropdown" name="dropdown">
+              <option value="option1">WINE SALES</option>
+              <option value="option2">FRUIT SALES</option>
+            </select>
+          </div>
+          <div class="lower">
+
+          </div>
         </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Ambil data dari rute '/scatter-plot-data' pada server
+        fetch('/scatter-plot-data')
+          .then(response => response.json())
+          .then(data => {
+            const xValues = data.map(entry => entry.x);
+            const yValues = data.map(entry => entry.y);
+  
+            const ctx = document.getElementById('scatterPlot').getContext('2d');
+            new Chart(ctx, {
+              type: 'scatter',
+              data: {
+                datasets: [{
+                  label: 'Scatter Plot',
+                  data: data.map(entry => ({ x: entry.x, y: entry.y })),
+                  borderColor: 'rgba(75, 192, 192, 1)',
+                  backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                }]
+              },
+              options: {
+                scales: {
+                  x: { type: 'linear', position: 'bottom' },
+                  y: { type: 'linear', position: 'left' }
+                }
+              }
+            });
+          })
+          .catch(error => console.error('Error fetching scatter plot data:', error));
+      });
+    </script>
+    
   </body>
 </html>

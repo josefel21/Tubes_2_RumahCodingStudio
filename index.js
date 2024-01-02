@@ -5,6 +5,10 @@ import {
   uploadPost,
 } from "./server/upload.js";
 
+import { 
+  scatterPage 
+} from "./server/scatterPlot.js";
+
 const PORT = 8080;
 const app = express();
 
@@ -42,8 +46,7 @@ app.get("/barChart", (req, res) => {
 });
 
 //scatter plot
-app.get("/scatterPlot", (req, res) => {
-  res.render("page/scatterPlot");
-});
+app.get("/scatterPlot", scatterPage);
+
 
 app.listen(PORT);
