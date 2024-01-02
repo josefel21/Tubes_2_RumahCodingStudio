@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/scatterPlot.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+    <script type="module" src="../javascript/scatterPlot.js" defer></script>
+
     <title>SCATTER PLOT</title>
   </head>
 
   <body>
     <div class="navBar"><%- include('../component/nav') %></div>
     <div class="ampli">
-      <img src="images/ampli.png" alt="Data Image">
+      <img src="images/ampli.png" alt="Data Image" />
     </div>
     <div class="content">
       <div class="chart">
-        <canvas id="scatterPlot" width="400" height="400"></canvas>
-        TEMPAT SCATTER PLOT
+        <div id="scatter-plot-container"></div>
       </div>
       <div class="filter">
         <div class="border">
@@ -33,44 +36,9 @@
               <option value="option2">FRUIT SALES</option>
             </select>
           </div>
-          <div class="lower">
-
-          </div>
+          <div class="lower"></div>
         </div>
       </div>
     </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Ambil data dari rute '/scatter-plot-data' pada server
-        fetch('/scatter-plot-data')
-          .then(response => response.json())
-          .then(data => {
-            const xValues = data.map(entry => entry.x);
-            const yValues = data.map(entry => entry.y);
-  
-            const ctx = document.getElementById('scatterPlot').getContext('2d');
-            new Chart(ctx, {
-              type: 'scatter',
-              data: {
-                datasets: [{
-                  label: 'Scatter Plot',
-                  data: data.map(entry => ({ x: entry.x, y: entry.y })),
-                  borderColor: 'rgba(75, 192, 192, 1)',
-                  backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                }]
-              },
-              options: {
-                scales: {
-                  x: { type: 'linear', position: 'bottom' },
-                  y: { type: 'linear', position: 'left' }
-                }
-              }
-            });
-          })
-          .catch(error => console.error('Error fetching scatter plot data:', error));
-      });
-    </script>
-    
   </body>
 </html>
