@@ -25,6 +25,12 @@
     align-items: center;
     justify-content: space-around;
     z-index: 1;
+    padding-top: 20px;
+}
+
+.dashboard img{
+    width: 3750%;
+    margin-top: 4px;
 }
 
 .image-container>img {

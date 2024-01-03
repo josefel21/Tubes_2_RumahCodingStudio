@@ -11,8 +11,26 @@
     z-index: 1;
 }
 
+#uploadForm{
+    margin-left: 30%;
+    margin-top: 15%;
+    align-items: center;
+}
+
+.content{
+    margin-top: 10%;
+    margin-left: 20%;
+    z-index: 1;
+}
+
+.navBar{
+    z-index: 1;
+}
+
 #uploadForm {
     text-align: center;
+    margin-top: 18%;
+    width: 100%;
 }
 
 label>img {
@@ -22,6 +40,13 @@ label>img {
 #fileInput {
     display: none;
 }
+
+.file-upload{
+    margin-top: 3%;
+    margin-left: 22%;
+
+    
+
 
 button {
     width: 10vw;
