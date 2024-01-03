@@ -1,0 +1,36 @@
+DROP TABLE IF EXISTS Customer;
+
+CREATE TABLE Customer (
+    ID int(14) NOT NULL,
+    Year_Birth int(12) NOT NULL,
+    Education varchar(10) NOT NULL,
+    Maritial_Status varchar(8) NOT NULL,
+    Income int(20) NOT NULL,
+    Kidhome int(3) NOT NULL,
+    Teenhome int (3) NOT NULL,
+    Dt_Customer date NOT NULL,
+    Recency int(7) NOT NULL,
+    MntWines int(11) NOT NULL,
+    MntFruits int(8) NOT NULL,
+    MntMeatProducts int(11) NOT NULL,
+    MntFishProducts int(10) NOT NULL,
+    MntSweetProducts int(10) NOT NULL,
+    MntGoldProds int(10) NOT NULL,
+    NumDealsPurchases int(5) NOT NULL,
+    NumWebPurchases int(5) NOT NULL,
+    NumCatalogPurchases int(5) NOT NULL,
+    NumStorePurchases int(3) NOT NULL,
+    NumWebVisitsMonth int(5) NOT NULL,
+    AcceptedCmp3 int(2) NOT NULL,
+    AcceptedCmp4 int(2) NOT NULL,
+    AcceptedCmp5 int(2) NOT NULL,
+    AcceptedCmp1 int(2) NOT NULL,
+    AcceptedCmp2 int(2) NOT NULL,
+    Complain int(2) NOT NULL,
+    Z_CostContact int(2) NOT NULL,
+    Z_Revenue int(4) NOT NULL,
+    Response int(1) NOt NULL,
+
+    PRIMARY KEY (ID),
+    UNIQUE (ID)
+);

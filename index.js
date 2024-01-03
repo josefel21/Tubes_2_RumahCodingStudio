@@ -1,6 +1,22 @@
 import path from "path";
 import express from "express";
 
+import {
+  uploadPost,
+} from "./server/upload.js";
+
+import { 
+  scatterPage 
+} from "./server/scatterPlot.js";
+
+import { 
+  getScatterData
+} from "./server/scatterPlot.js";
+
+import {
+   getAttributes
+} from "./server/scatterPlot.js";
+
 const PORT = 8080;
 const app = express();
 
@@ -26,6 +42,7 @@ app.get("/home", (req, res) => {
 app.get("/upload", (req, res) => {
   res.render("page/upload");
 });
+app.post("/uploadPost",uploadPost);
 
 app.get("/summary", (req, res) => {
   res.render("page/summary");
@@ -37,8 +54,8 @@ app.get("/barChart", (req, res) => {
 });
 
 //scatter plot
-app.get("/scatterPlot", (req, res) => {
-  res.render("page/scatterPlot");
-});
+app.get("/scatterPlot", scatterPage);
+app.get("/api/scatterData", getScatterData);
+app.get("/api/getAttributes", getAttributes);
 
 app.listen(PORT);

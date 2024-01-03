@@ -73,7 +73,7 @@ body {
 .buttom {
     display: flex;
     flex-direction: row;
-    margin-top: 7%;
+    margin-top: 6%;
     height: 60px;
     margin-left: -20%;
 }

@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/scatterPlot.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/scatterPlot.css">
-  <title>SCATTER PLOT</title>
-</head>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+    <script type="module" src="../javascript/scatterPlot.js" defer></script>
 
-<body>
-  <div class="navBar">
-    <%- include('../component/nav') %>
-  </div>
-  <div class="dev">
-    UPSS, PAGES STILL UNDER DEVELOPMENT
-  </div>
-</body>
+    <title>SCATTER PLOT</title>
+  </head>
 
+  <body>
+    <div class="navBar"><%- include('../component/nav') %></div>
+    <div class="ampli">
+      <img src="images/ampli.png" alt="Data Image" />
+    </div>
+    <div class="content">
+      <div class="chart">
+        <div id="scatter-plot-container"></div>
+      </div>
+      <div class="filter">
+        <div class="border">
+          <div class="upper">
+            <h3>FILTER</h3>
+            <p>AXIS X</p>
+            <select id="xDropdown" name="xDropdown"></select>
+            <p>AXIS Y</p>
+            <select id="yDropdown" name="yDropdown"></select>
+          </div>
+          <div class="lower"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

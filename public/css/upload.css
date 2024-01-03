@@ -3,24 +3,45 @@ body{
     flex-direction: row;
 }
 
+#uploadForm{
+    margin-left: 30%;
+    margin-top: 15%;
+    align-items: center;
+    
+    
+}
+
+.content{
+    margin-top: 10%;
+    margin-left: 20%;
+    z-index: 1;
+}
+
 .navBar{
     z-index: 1;
 }
 
-.content {
+.uploadForm {
     text-align: center;
     margin-top: 18%;
-   
     width: 100%;
 }
 
-img {
+.ampli{
+    position: fixed;
+    transform: rotate(14deg);
+    margin-top: 10%;
+}
+
+
+.content img {
     width: 300px; /* Sesuaikan ukuran gambar kecil */
 }
 
 .file-upload{
-    margin-top: 1%;
-    margin-left: 5%;
+    margin-top: 3%;
+    margin-left: 22%;
+
     
 }
 
@@ -33,7 +54,8 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 2%;
+    margin-top: 5%;
+    margin-left: 45%;
 }
 
 button:hover {

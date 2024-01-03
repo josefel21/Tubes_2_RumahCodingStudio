@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/upload.css">
+  <script type="module" src="/javascript/upload.js" defer></script>
   <title>UPLOAD</title>
 </head>
 
@@ -12,13 +13,20 @@
   <div class="navBar">
     <%- include('../component/nav') %>
   </div>
-  <div class="content">
-    <img src="images/uploadIcon.png" alt="Gambar Kecil">
-    <div class="file-upload">
-      <input type="file" id="fileInput" name="fileInput" accept=".pdf, .doc, .docx">
-    </div>
-    <button>UPLOAD</button>
+  <div class="ampli">
+    <img src="images/ampli.png" alt="Data Image">
   </div>
+  <div class="content">
+    <form id="uploadForm" enctype="multipart/form-data">
+      <img src="images/uploadIcon.png" alt="Gambar Kecil">
+      <div class="file-upload">
+        <input type="file" id="fileInput" name="csvFile" accept=".csv" required>
+      </div>
+      <button id="uploadButton" type="button">UPLOAD</button>
+  </form>
+  </div>
+  
+  
 </body>
 
 </html>

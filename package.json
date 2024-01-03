@@ -4,6 +4,7 @@
   "description": "tubes 2 manpro",
   "main": "index.js",
   "type": "module",
+  "proxy": "http://localhost:8080",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
@@ -18,10 +19,17 @@
     "nodemon": "^2.0.22"
   },
   "dependencies": {
+    "chart.js": "^4.4.1",
+    "csv-parser": "^3.0.0",
+    "d3": "^7.8.5",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
-    "mysql": "^2.18.1"
+    "fast-csv": "^4.3.6",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.5",
+    "stream-to-promise": "^3.0.0"
   },
   "bugs": {
     "url": "https://github.com/josefel21/Tubes_2_RumahCodingStudio/issues"
