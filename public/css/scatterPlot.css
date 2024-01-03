@@ -14,19 +14,28 @@
     background-color: rgb(228, 227, 234);
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: end;
     color: rgb(41, 117, 149);
-    box-shadow:0 4px 10px rgba(0, 0, 0, 0);
+    box-shadow:10px 10px 10px 10px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
+.attr>.attr1{
+    padding-right: 2.5vw;
+}
+
+#ddVar {
+    padding-top: 5px;
+}
+
 .quote{
-    position: fixed;
+    position: absolute;
     text-align: center;
     top: 30%;
-    left: 34%;
+    left: 21vw;
 }
 
 .quote>h1 {
     margin: 0;
+    font-size: 2.5vw;
 }

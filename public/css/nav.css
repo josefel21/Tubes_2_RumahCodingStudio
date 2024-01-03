@@ -6,15 +6,19 @@ nav {
   background-color: rgb(228, 227, 234);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   color: rgb(41, 117, 149);
   box-shadow:0 4px 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
+nav>div {
+  padding-left: 2.5vw;
+}
+
 h1 {
   margin: 20px 0;
-  font-size: xx-large;
+  font-size: 2vw;
   margin-top: 30%;
 }
 
@@ -35,7 +39,7 @@ a {
   text-decoration: none;
   color: #828080;
   transition: color 0.3s;
-  font-size: larger;
+  font-size: 1.2vw;
 }
 
 a:hover {
