@@ -26,13 +26,13 @@ body{
     display: flex;
     flex-direction: column;
     margin-left: 10%;
-    width: 540px;
+    width: 500px;
     z-index: 1;
     padding-top: 20px;
 }
 
 .dashboard img{
-    width: 4200%;
+    width: 3750%;
     margin-top: 4px;
 }
 
