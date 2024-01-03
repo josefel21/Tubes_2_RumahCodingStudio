@@ -36,6 +36,10 @@ app.get("/upload", (req, res) => {
 });
 app.post("/uploadPost",uploadPost);
 
+app.get("/summary", (req, res) => {
+  res.render("page/summary");
+});
+
 //bar chart
 app.get("/barChart", barPage);
 
