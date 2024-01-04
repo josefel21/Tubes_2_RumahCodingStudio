@@ -9,18 +9,6 @@ import {
   barPage,
 } from "./server/barChart.js"
 
-import { 
-  scatterPage 
-} from "./server/scatterPlot.js";
-
-import { 
-  getScatterData
-} from "./server/scatterPlot.js";
-
-import {
-   getAttributes
-} from "./server/scatterPlot.js";
-
 const PORT = 8080;
 const app = express();
 
@@ -56,8 +44,8 @@ app.get("/summary", (req, res) => {
 app.get("/barChart", barPage);
 
 //scatter plot
-app.get("/scatterPlot", scatterPage);
-app.get("/api/scatterData", getScatterData);
-app.get("/api/getAttributes", getAttributes);
+app.get("/scatterPlot", (req, res) => {
+  res.render("page/scatterPlot");
+});
 
 app.listen(PORT);
