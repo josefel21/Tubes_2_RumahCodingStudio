@@ -4,16 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/barChart.css">
   <title>BAR CHART</title>
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+  <script type="module" src="../javascript/barChart.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="../css/global.css" />
+  <link rel="stylesheet" type="text/css" href="../css/barChart.css">
 </head>
 
 <body>
-  <div class="navBar">
-    <%- include('../component/nav') %>
+  <div class="navBar"><%- include('../component/nav') %></div>
+  <div class="ampli">
+    <img src="images/ampli.png" alt="Data Image">
   </div>
-  <div class="dev">
-    UPSS, PAGES STILL UNDER DEVELOPMENT
+  <div class="content">
+    <div class="chart">
+      <div id="barChart-container"></div>
+    </div>
+    <div class="filter">
+      <div class="border">
+        <div class="upper">
+          <h3>VARIABEL</h3>
+          <p>FILTER</p>
+          <select id="att1" name="att1"></select>
+        </div>
+        <div class="lower"></div>
+      </div>
+    </div>
   </div>
 </body>
 
