@@ -17,6 +17,10 @@ import {
    getAttributes
 } from "./server/scatterPlot.js";
 
+import {
+   executeQuery 
+} from "./server/summary.js";
+
 const PORT = 8080;
 const app = express();
 
@@ -57,5 +61,6 @@ app.get("/barChart", (req, res) => {
 app.get("/scatterPlot", scatterPage);
 app.get("/api/scatterData", getScatterData);
 app.get("/api/getAttributes", getAttributes);
+app.get("/api/executeQuery", executeQuery)
 
 app.listen(PORT);

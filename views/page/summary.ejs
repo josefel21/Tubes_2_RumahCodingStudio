@@ -1,82 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/summary.css" />
+    <script type="module" src="../javascript/summary.js" defer></script>
+    <title>HOME</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/summary.css">
-  <title>HOME</title>
-</head>
-
-<body>
-  <div class="navBar">
-    <%- include('../component/nav') %>
-  </div>
-  <div class="ampli">
-    <img src="images/ampli.png" alt="Data Image">
-  </div>
-  <div class="sum-content">
-        <div class="dropdown">
-            <select id="dropdown" name="dropdown">
-                <option value="option1">WINE SALES</option>
-                <option value="option2">FRUIT SALES</option>
-                <option value="option3">MEAT SALES</option>
-                <option value="option4">FISH SALES</option>
-                <option value="option5">SWEETS SALES</option>
-                <option value="option6">GOLDS SALES</option>
-            </select>
-        </div> 
+  <body>
+    <div class="navBar"><%- include('../component/nav') %></div>
+    <div class="ampli">
+      <img src="images/ampli.png" alt="Data Image" />
+    </div>
+    <div class="content">
+      <div class="sum-content">
+        <h1>SUMMARY</h1>
         <div class="sum-res">
-            <div class="text-res">
-                <p>Group By:</p>
-            </div>
-            <div class="dropdown-res">
-                <select id="dropdown-res" name="dropdown">
-                    <option value="option1">Opsi 1</option>
-                    <option value="option2">Opsi 2</option>
-                    <option value="option3">Opsi 3</option>
-                </select>
-            </div>
-            <div class="total-text">
-                <p>Total fruit sales transactions carried out by customers with education category x</p>
-                 <h1>SELLS TOTAL</h1>
-            </div>
-            <div class="total">
-                <p>RP 123.000,-</p>
-            </div>
+          <div class="text-res">
+            <p>Group By:</p>
+          </div>
+          <div id="resultContainer" class="dropdown-res"></div>
         </div>
-  </div>
-  <div class="guide">
-        <p>Variabel Guide</p>
-        <div class="upper">
-            <div class="upper-text">
-                <p>List of variables to find out the number of sales</p>
-            </div>
-            <div class="upper-var">
-                <ul>
-                    <li>Wine Sales</li>
-                    <li>Fruit Sales</li>
-                    <li>Meat Sales</li>
-                </ul>
-                <ul>
-                    <li>Fish Sales</li>
-                    <li>Sweets Sales</li>
-                    <li>Golds Sales</li>
-                </ul>
-            </div>
-        </div>
-        <div class="bottom">
-            <div class="bottom-text">
-                <p>(Group By) List of variables to group each product sales based on each customer education group</p>
-            </div>
-            <div class="bottom-var">
-                <ul>
-                    <li>var x</li>
-                </ul>
-            </div>
-        </div>
-  </div>
-  
-</body>
+      </div>
+      <div class="guide">
+        <p>OPERATION</p>
+        <select id="operationSelect" name="operationSelect"></select>
+        <p>SELECT</p>
+        <select id="selectSelect" name="selectSelect"></select>
+        <p>GROUP BY</p>
+        <select id="groupBySelect" name="groupBySelect"></select>
+        <div class="opGuide">
+            <p>GUIDE</p>
+            <h3>OPERATION</h3>
+            <h4>Pilih untuk blalallalas asjduasd las dhahsd </h4>
 
+            <h3>SELECT</h3>
+            <h4>Pilih untuk blalallalas asjduasd las dhahsd </h4>
+
+            <h3>GROUP BY</h3>
+            <h4>Pilih untuk blalallalas asjduasd las dhahsd </h4>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
