@@ -23,6 +23,10 @@ import {
   getBarData
 } from "./server/barChart.js"
 
+import {
+   executeQuery 
+} from "./server/summary.js";
+
 const PORT = 8080;
 const app = express();
 
@@ -57,5 +61,6 @@ app.get("/api/scatterData", getScatterData);
 
 //get attributes
 app.get("/api/getAttributes", getAttributes);
+app.get("/api/executeQuery", executeQuery)
 
 app.listen(PORT);
