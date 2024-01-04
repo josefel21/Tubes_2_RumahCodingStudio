@@ -2,11 +2,25 @@ import path from "path";
 import express from "express";
 
 import {
+  landingPage,
+  homePage,
+  uploadPage,
+  barPage,
+  scatterPage,
+  summaryPage
+} from "./server/util.js"
+
+import {
   uploadPost,
 } from "./server/upload.js";
 
+import { 
+  getScatterData,
+  getAttributes
+} from "./server/scatterPlot.js";
+
 import {
-  barPage,
+  getBarData
 } from "./server/barChart.js"
 
 const PORT = 8080;
@@ -21,27 +35,27 @@ app.set("view engine", "ejs");
 
 
 //landing
-app.get("/", (req, res) => {
-  res.render("page/landing");
-});
+app.get("/", landingPage);
 
 //home
-app.get("/home", (req, res) => {
-  res.render("page/home");
-});
+app.get("/home", homePage);
 
 //upload
-app.get("/upload", (req, res) => {
-  res.render("page/upload");
-});
+app.get("/upload", uploadPage);
 app.post("/uploadPost",uploadPost);
+
+//summary
+app.get("/summary", summaryPage);
 
 //bar chart
 app.get("/barChart", barPage);
+app.get("/api/barChartData",getBarData);
 
 //scatter plot
-app.get("/scatterPlot", (req, res) => {
-  res.render("page/scatterPlot");
-});
+app.get("/scatterPlot", scatterPage);
+app.get("/api/scatterData", getScatterData);
+
+//get attributes
+app.get("/api/getAttributes", getAttributes);
 
 app.listen(PORT);

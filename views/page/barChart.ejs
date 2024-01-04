@@ -20,45 +20,20 @@
   <div class="ampli">
     <img src="images/ampli.png" alt="Data Image">
   </div>
-  <div class="quote">
-    <h1>PILIH ATRIBUT UNTUK MELIHAT BARCHART</h1>
-  </div>
-  <div class="attr">
-    <h1 class="attr1">VARIABLE</h1>
-    <h2 class="attr1">ATRIBUT</h2>
-    <form name="variable" id="ddVar" class="attr1">
-      <select name="att1" id="att1">
-        <option value="def" selected="selected">pilih atribut</option>
-        <option value="year">Year_Birth</option>
-        <option value="education">Education</option>
-        <option value="marital">Martial_Status</option>
-        <option value="income">Income</option>
-        <option value="kidhome">Kidhome</option>
-        <option value="teenhome">Teenhome</option>
-        <option value="dt">Dt_Customer</option>
-        <option value="recency">Recency</option>
-        <option value="mntwines">MntWines</option>
-        <option value="mntfruits">MntFruits</option>
-        <option value="mntmeatproducts">MntMeatProducts</option>
-        <option value="mntfishproducts">MntFishProducts</option>
-        <option value="mntsweetproducts">MntSweetProducts</option>
-        <option value="mntgoldprods">MntGoldProds</option>
-        <option value="numdealspurchases">NumDealsPurchases</option>
-        <option value="numwebpurchases">NumWebPurchases</option>
-        <option value="numcatalogpurchases">NumCatalogPurchases</option>
-        <option value="numstorepurchases">NumStorePurchases</option>
-        <option value="numwebvisitsmonth">NumWebVisitsMonth</option>
-        <option value="acceptedcmp1">AcceptedCmp1</option>
-        <option value="acceptedcmp2">AcceptedCmp2</option>
-        <option value="acceptedcmp3">AcceptedCmp3</option>
-        <option value="acceptedcmp4">AcceptedCmp4</option>
-        <option value="acceptedcmp5">AcceptedCmp5</option>
-        <option value="complain">Complain</option>
-        <option value="zcostcontact">Z_CostContract</option>
-        <option value="zrevenue">Z_Revenue</option>
-        <option value="response">Response</option>
-      </select>
-    </form>
+  <div class="content">
+    <div class="chart">
+      <div id="barChart-container"></div>
+    </div>
+    <div class="filter">
+      <div class="border">
+        <div class="upper">
+          <h3>VARIABEL</h3>
+          <p>FILTER</p>
+          <select id="att1" name="att1"></select>
+        </div>
+        <div class="lower"></div>
+      </div>
+    </div>
   </div>
 </body>
 
